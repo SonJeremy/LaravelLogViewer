@@ -9,7 +9,7 @@
         "log viewer",
         "better-log-viewer"
     ],
-    "homepage": "https://github.com/opcodesio/log-viewer",
+    "homepage": "https://github.com/SonJeremy/LaravelLogViewer",
     "license": "MIT",
     "authors": [
         {
@@ -47,9 +47,7 @@
         }
     },
     "scripts": {
-        "analyse": "echo \"Static analysis not configured yet.\" && exit 0",
         "test": "vendor/bin/pest --order-by random",
-        "test-coverage": "echo \"Test coverage not configured yet.\" && exit 0",
         "format": "vendor/bin/pint"
     },
     "config": {
