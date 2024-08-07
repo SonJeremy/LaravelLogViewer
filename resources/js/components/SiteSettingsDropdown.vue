@@ -70,13 +70,6 @@
             </a>
           </MenuItem>
 
-          <MenuItem v-slot="{ active }">
-            <a href="https://www.github.com/opcodesio/log-viewer" target="_blank" :class="[active ? 'active' : '']">
-              <QuestionMarkCircleIcon class="w-4 h-4" />
-              Help
-            </a>
-          </MenuItem>
-
           <div class="divider"></div>
 
           <MenuItem v-slot="{ active }">

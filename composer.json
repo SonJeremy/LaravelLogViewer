@@ -1,14 +1,5 @@
 {
-    "name": "SonJeremy/LaravelLogViewer",
-    "description": "Fast and easy-to-use log viewer for your Laravel application",
-    "keywords": [
-        "arukompas",
-        "opcodesio",
-        "laravel",
-        "logs",
-        "log viewer",
-        "better-log-viewer"
-    ],
+    "name": "opcodesio/log-viewer",
     "homepage": "https://github.com/SonJeremy/LaravelLogViewer",
     "license": "MIT",
     "authors": [
@@ -20,7 +11,7 @@
     ],
     "require": {
         "php": "^8.0",
-        "illuminate/contracts": "^8.0|^9.0|^10.0|^11.0",
+        "illuminate/contracts": "*",
         "opcodesio/mail-parser": "^0.1.6"
     },
     "require-dev": {

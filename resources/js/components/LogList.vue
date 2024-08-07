@@ -12,9 +12,6 @@
               <ArrowPathIcon class="w-5 h-5" />
             </button>
           </div>
-          <div class="hidden md:block">
-            <SiteSettingsDropdown class="ml-2" id="desktop-site-settings" />
-          </div>
           <div class="md:hidden">
             <button type="button" class="menu-button">
               <Bars3Icon class="w-5 h-5 ml-2" @click="fileStore.toggleSidebar" />
