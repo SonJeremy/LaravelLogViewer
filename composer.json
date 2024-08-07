@@ -60,6 +60,6 @@
     "conflict": {
         "arcanedev/log-viewer": "^8.0"
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
