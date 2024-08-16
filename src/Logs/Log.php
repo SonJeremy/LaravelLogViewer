@@ -134,6 +134,6 @@ class Log
 
     public function url(): string
     {
-        return route('log-viewer.index', ['file' => $this->fileIdentifier, 'query' => 'log-index:'.$this->index]);
+        return route('MonitorLogView', ['file' => $this->fileIdentifier, 'query' => 'log-index:'.$this->index]);
     }
 }
