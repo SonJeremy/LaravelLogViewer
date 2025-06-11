@@ -4,6 +4,12 @@
       <div class="sm:flex sm:flex-col-reverse">
         <h1 class="font-semibold text-brand-700 dark:text-brand-600 text-2xl flex items-center">
           Log Viewer
+          <span class="md:hidden flex-1 flex justify-end">
+            <SiteSettingsDropdown class="ml-2" />
+            <button type="button" class="menu-button">
+              <XMarkIcon class="w-5 h-5 ml-2" @click="fileStore.toggleSidebar" />
+            </button>
+          </span>
         </h1>
 
         <div v-if="LogViewer.back_to_system_url">
@@ -86,8 +92,8 @@
                     <ChevronRightIcon :class="[fileStore.isOpen(folder) ? 'rotate-90' : '', 'transition duration-100']" />
                   </span>
                   <span class="file-name">
-                    <span v-if="String(folder.clean_path || '').startsWith('root')">
-                      <span class="text-gray-500 dark:text-gray-400">root</span>{{ String(folder.clean_path).substring(4) }}
+                    <span v-if="String(folder.clean_path || '').startsWith(rootFolderPrefix)">
+                      <span class="text-gray-500 dark:text-gray-400">{{ rootFolderPrefix }}</span>{{ String(folder.clean_path).substring(rootFolderPrefix.length) }}
                     </span>
                     <span v-else>{{ folder.clean_path }}</span>
                   </span>
@@ -242,6 +248,8 @@ const selectFile = (fileIdentifier) => {
     replaceQuery(router, 'file', fileIdentifier);
   }
 };
+
+const rootFolderPrefix = window.LogViewer?.root_folder_prefix || 'root';
 
 onMounted(async () => {
   hostStore.selectHost(route.query.host || null);

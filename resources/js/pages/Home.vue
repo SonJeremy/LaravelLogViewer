@@ -10,14 +10,14 @@
   </div>
 
   <div class="absolute bottom-4 right-4 flex items-center">
-    <p class="text-xs text-gray-500 dark:text-gray-400 -mb-0.5">
+    <p class="text-xs text-gray-500 dark:text-gray-400 mr-5 -mb-0.5">
       <template v-if="logViewerStore.performance?.requestTime">
         <span><span class="hidden md:inline">Memory: </span><span class="font-semibold">{{ logViewerStore.performance.memoryUsage }}</span></span>
         <span class="mx-1.5">&middot;</span>
         <span><span class="hidden md:inline">Duration: </span><span class="font-semibold">{{ logViewerStore.performance.requestTime }}</span></span>
         <span class="mx-1.5">&middot;</span>
       </template>
-      <span><span class="hidden md:inline">Version: </span><span class="font-semibold">3.12.0 (4XS)</span></span>
+      <span><span class="hidden md:inline">Version: </span><span class="font-semibold">3.17.1 (4XS)</span></span>
     </p>
   </div>
 

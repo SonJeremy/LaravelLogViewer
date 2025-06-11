@@ -37,6 +37,14 @@
             </button>
           </MenuItem>
 
+          <MenuItem @click.stop.prevent="copyUrlToClipboard" v-slot="{ active }">
+            <button :class="[active ? 'active' : '']">
+              <ShareIcon class="w-4 h-4" />
+              <span v-show="!copied">Share this page</span>
+              <span v-show="copied" class="text-brand-500">Link copied!</span>
+            </button>
+          </MenuItem>
+
           <div class="divider"></div>
 
           <MenuItem @click.stop.prevent="logViewerStore.toggleTheme()" v-slot="{ active }">
